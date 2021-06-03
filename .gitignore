@@ -1,6 +1,9 @@
 *~
 core.*
 
+!envs/
 envs/*
+!resources/
 resources/*
+!results/
 results/*
