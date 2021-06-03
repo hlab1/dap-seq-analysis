@@ -2,7 +2,7 @@
 This repository contains code and instructions for a tutorial of analysis of DAP-seq data.
 
 ## Testing using AREB3 data
-Clone this repo.  Then **enter the package directory** to run the following scripts.
+Clone this repo.  Then **enter the package directory** to run the following scripts.  You will need about 6Gb of space.
 1. Run `workflow/scripts/get_singularity_chenv.sh` to pull the `genericdata/ch-env` container.
    - The Docker image is now at `envs/singularity/genericdata/ch-env_latest.sif`
 2. Run `workflow/scripts/get_genome_tair10.sh` to download (a) TAIR10 genome information, (2) MEME motif database, and set up the support files needed for later steps.
