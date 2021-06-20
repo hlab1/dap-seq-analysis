@@ -9,17 +9,12 @@ Clone this repo.  Then **enter the package directory** to run the following scri
    -  The Arabidopsis genome information files are in `resources/Illumina_iGenomes/Arabidopsis_thaliana/Ensembl/TAIR10`.
    -  The Arabidopsis DAP-seq motifs are in `resources/meme_motif_db/motif_databases.12.21/ARABD`.
 3. *Only needed if you want to download data from SRA.** Run `workflow/scripts/config_sratools.sh` to configure SRA tools.  See reference here https://github.com/ncbi/sra-tools/wiki/03.-Quick-Toolkit-Configuration.
-   ```
-   You will see a screen where you operate the buttons by pressing the letter highlighted in red, or by pressing the tab-key until the wanted button is reached and then pressing the space- or the enter-key.
 
-1. You want to enable the "Remote Access" option on the Main screen.
-
-2. Proceed to the "Cache" tab where you will want to enable "local file-caching" and you want to set the "Location of user-repository".
-
-    a) The repository directory needs to be set to an empty folder. This is the folder where prefetch will deposit the files.
-
-Go to your cloud provider tab and accept to "report cloud instance identity".
-```
+>  You will see a screen where you operate the buttons by pressing the letter highlighted in red, or by pressing the tab-key until the wanted button is reached and then pressing the space- or the enter-key.
+> 1. You want to enable the "Remote Access" option on the Main screen.
+> 2. Proceed to the "Cache" tab where you will want to enable "local file-caching" and you want to set the "Location of user-repository".
+>   a) The repository directory needs to be set to an empty folder. This is the folder where prefetch will deposit the files.
+> 3. Go to your cloud provider tab and accept to "report cloud instance identity".
 
 4. Run `workflow/scripts/run_demo_ath_areb3.sh` to download the AREB3 test data from SRA and perform trimming, mapping, peak calling and motif discovery.
    -  Gzipped FASTQ of sequencing reads is `resources/demo_data/SRR2926843.fastq.gz`
