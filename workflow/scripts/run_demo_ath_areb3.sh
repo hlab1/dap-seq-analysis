@@ -22,5 +22,5 @@ sort -k9,9nr -k7,7nr nuc1_GEM_events.narrowPeak | head -600 > nuc1_GEM_events.to
 singularity exec $WD/envs/singularity/genericdata/ch-env_latest.sif /bin/bash -c "bedtools slop -b 0 -i nuc1_GEM_events.top600.narrowPeak -g $WD/resources/Illumina_iGenomes/Arabidopsis_thaliana/Ensembl/TAIR10/Sequence/WholeGenomeFasta/genome.chrom.sizes | bedtools getfasta -fi $WD/resources/Illumina_iGenomes/Arabidopsis_thaliana/Ensembl/TAIR10/Sequence/WholeGenomeFasta/genome.fa -bed stdin -fo nuc1_GEM_events.top600.narrowPeak.fa"
 echo "=====Start running MEME motif discovery====="
 cd $WD
-mkdir -p results/gem_01_memechip00/bZIP_tnt/AREB3_Col-B_v3
-singularity exec $WD/envs/singularity/genericdata/ch-env_latest.sif /bin/bash -c "meme-chip -oc results/gem_01_memechip00/bZIP_tnt/AREB3_Col-B_v3 -db resources/meme_motif_db/motif_databases.12.21/ARABD/ArabidopsisDAPv1.meme -meme-p 1 results/gem_01/bZIP_tnt/AREB3_Col-B_v3/nuc1/nuc1_GEM_events.top600.narrowPeak.fa 2>&1 | tee results/gem_01_memechip00/bZIP_tnt/AREB3_Col-B_v3/meme-chip.log"
+mkdir -p results/gem_01_memechip01/bZIP_tnt/AREB3_Col-B_v3
+singularity exec $WD/envs/singularity/genericdata/ch-env_latest.sif /bin/bash -c "meme-chip -oc results/gem_01_memechip01/bZIP_tnt/AREB3_Col-B_v3 -db resources/meme_motif_db/motif_databases.12.21/ARABD/ArabidopsisDAPv1.meme -meme-p 1 results/gem_01/bZIP_tnt/AREB3_Col-B_v3/nuc1/nuc1_GEM_events.top600.narrowPeak.fa 2>&1 | tee results/gem_01_memechip01/bZIP_tnt/AREB3_Col-B_v3/meme-chip.log"
