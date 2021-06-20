@@ -8,7 +8,7 @@ Clone this repo.  Then **enter the package directory** to run the following scri
 2. Run `workflow/scripts/get_genome_tair10.sh` to download (a) TAIR10 genome information, (2) MEME motif database, and set up the support files needed for later steps.
    -  The Arabidopsis genome information files are in `resources/Illumina_iGenomes/Arabidopsis_thaliana/Ensembl/TAIR10`.
    -  The Arabidopsis DAP-seq motifs are in `resources/meme_motif_db/motif_databases.12.21/ARABD`.
-3. Run `workflow/scripts/config_sratools.sh` to configure SRA tools.  See reference here https://github.com/ncbi/sra-tools/wiki/03.-Quick-Toolkit-Configuration.
+3. *Only needed if you want to download data from SRA.** Run `workflow/scripts/config_sratools.sh` to configure SRA tools.  See reference here https://github.com/ncbi/sra-tools/wiki/03.-Quick-Toolkit-Configuration.
    ```
    You will see a screen where you operate the buttons by pressing the letter highlighted in red, or by pressing the tab-key until the wanted button is reached and then pressing the space- or the enter-key.
 
