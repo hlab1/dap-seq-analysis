@@ -1,7 +1,7 @@
 #!/bin/bash
 export WD=$PWD
-#echo "=====Start downloading test data====="
-#sh ./get_data_ath_areb3.sh
+echo "=====Start downloading test data====="
+sh $WD/workflow/scripts/get_data_ath_areb3.sh
 echo "=====Start adapter trimming====="
 mkdir -p results/fq_trimgalore_01/SRR2926843
 singularity exec $WD/envs/singularity/genericdata/ch-env_latest.sif trim_galore -q 20 --fastqc --output_dir results/fq_trimgalore_01/SRR2926843 --basename AREB3_Col-B_v3_SRR2926843_R1 resources/demo_data/SRR2926843.fastq.gz 2>&1 | tee results/fq_trimgalore_01/SRR2926843/AREB3_Col-B_v3_SRR2926843_R1.log
