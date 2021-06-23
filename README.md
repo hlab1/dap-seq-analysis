@@ -20,15 +20,19 @@ Clone this repo.  Then **enter the package directory** to run the following scri
 >   a) The repository directory needs to be set to an empty folder. This is the folder where prefetch will deposit the files.
 > 3. Go to your cloud provider tab and accept to "report cloud instance identity".
 
-4. Run `workflow/scripts/run_demo_ath_areb3.sh` to download the AREB3 test data from SRA and perform trimming, mapping, peak calling and motif discovery.
-   -  Gzipped FASTQ of sequencing reads is `resources/demo_data/SRR2926843.fastq.gz`
-   -  Trimmed FASTQ is `results/fq_trimgalore_01/SRR2926843/AREB3_Col-B_v3_SRR2926843_R1_trimmed.fq.gz`
+4. Download AREB3 test data using one of the options below:
+   - Option a: run `workflow/scripts/get_demo_ath_areb3_sra.sh` to download from SRA and perform trimming.
+       - Gzipped FASTQ of sequencing reads are in `resources/demo_data`.
+	   - Trimmed FASTQ are in `results/fq_trimgalore_01/`.
+   - Option b: run `workflow/scripts/get_demo_ath_areb3_gdrive.sh` to download from a public Google drive.
+       - Trimmed FASTQ are in `results/fq_trimgalore_01/`.
+4. Run `workflow/scripts/run_demo_ath_areb3.sh` to perform mapping, peak calling and motif discovery.
    -  BAM file of mapped reads is `results/bowtie2_01/bZIP_tnt/AREB3_Col-B_v3/AREB3_Col-B_v3.bam`
    -  BAM file of MAPQ>=30 reads is `results/bowtie2_01/bZIP_tnt/AREB3_Col-B_v3/AREB3_Col-B_v3.q30nuc.bam`
    -  GEM peak calling results are in `results/gem_01/bZIP_tnt/AREB3_Col-B_v3/nuc1`
    -  narrowPeak file for top 600 peaks is `results/gem_01/bZIP_tnt/AREB3_Col-B_v3/nuc1/nuc1_GEM_events.top600.narrowPeak`
    -  FASTA sequences of top 600 peaks are in `results/gem_01/bZIP_tnt/AREB3_Col-B_v3/nuc1/nuc1_GEM_events.top600.narrowPeak.fa`
-   -  MEME reults are in `results/gem_01_memechip00/bZIP_tnt/AREB3_Col-B_v3`
+   -  MEME reults are in `results/gem_01_memechip01/bZIP_tnt/AREB3_Col-B_v3`
 
 ## Dependencies
 - Docker container https://hub.docker.com/r/genericdata/ch-env or dockerfile https://github.com/genericdata/ch-env/blob/main/Dockerfile.
