@@ -39,3 +39,5 @@ Clone this repo.  Then **enter the package directory** to run the following scri
   - Contains the packages needed in running a basic DAP-seq analysis pipeline
 - Singularity for running this in a HPC environment
 
+## Acknowledgments
+- Eric Borenstein (https://github.com/genericdata), NYU Biology HPC Specialist, created the Docker container.
